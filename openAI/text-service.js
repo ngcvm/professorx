@@ -4,7 +4,7 @@ const openai = new OpenAIApi(new Configuration({
     apiKey: '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',
 }));
 
-const indentifyEmotion = async (conversation, participants) => {
+const identifyEmotion = async (conversation, participants) => {
     const conversationPrompt = `Classify emotion of people in this conversation:
     ${conversation}
     Show emotion of each one from the conversation above`;
@@ -23,4 +23,4 @@ const indentifyEmotion = async (conversation, participants) => {
     });
     return results;
 }
-export default { indentifyEmotion };
+export default { identifyEmotion };
